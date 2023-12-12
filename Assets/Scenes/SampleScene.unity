@@ -443,6 +443,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252397016}
   m_CullTransparentMesh: 1
+--- !u!1 &257613607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257613608}
+  - component: {fileID: 257613610}
+  - component: {fileID: 257613609}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &257613608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257613607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 568088832}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &257613609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257613607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.3339622, b: 0.3339622, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\uC794\uC561 \uBD80\uC871"
+--- !u!222 &257613610
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257613607}
+  m_CullTransparentMesh: 1
 --- !u!1 &277548544
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +644,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 277548546}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OnOutButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &449002652
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +778,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 449002654}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OnInButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +894,7 @@ GameObject:
   - component: {fileID: 549207803}
   - component: {fileID: 549207805}
   - component: {fileID: 549207804}
+  - component: {fileID: 549207806}
   m_Layer: 5
   m_Name: Readymoney
   m_TagString: Untagged
@@ -809,8 +914,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1434572304}
   - {fileID: 1071503704}
+  - {fileID: 1434572304}
   m_Father: {fileID: 1854974423}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -857,6 +962,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549207802}
   m_CullTransparentMesh: 1
+--- !u!114 &549207806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549207802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1071503705}
+  balanceMoneyText: {fileID: 985269418}
+  LessMoneyPanel: {fileID: 568088831}
+  depositInput: {fileID: 785893967}
+  withdrawInput: {fileID: 1134699879}
+  depositButton: {fileID: 1016606748}
 --- !u!1 &562297849
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +1060,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562297849}
   m_CullTransparentMesh: 1
+--- !u!1 &568088831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568088832}
+  - component: {fileID: 568088834}
+  - component: {fileID: 568088833}
+  - component: {fileID: 568088835}
+  m_Layer: 5
+  m_Name: LessMoneyPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &568088832
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568088831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 257613608}
+  m_Father: {fileID: 1854974423}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &568088833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568088831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &568088834
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568088831}
+  m_CullTransparentMesh: 1
+--- !u!114 &568088835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568088831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1071503705}
+  balanceMoneyText: {fileID: 985269418}
+  LessMoneyPanel: {fileID: 568088831}
+  depositInput: {fileID: 785893967}
+  withdrawInput: {fileID: 1134699879}
+  depositButton: {fileID: 1016606748}
 --- !u!1 &677292434
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,10 +1185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3c550f90546ad41836fec538fd432c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depositPanel: {fileID: 1473660550}
-  depositButton: {fileID: 1935783750}
-  withdrawPanel: {fileID: 962239281}
-  withdrawButton: {fileID: 1372033737}
 --- !u!4 &677292436
 Transform:
   m_ObjectHideFlags: 0
@@ -1078,7 +1293,7 @@ GameObject:
   - component: {fileID: 785893968}
   - component: {fileID: 785893967}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: InputField(Deposit)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,7 +1374,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: Deposit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -1223,6 +1450,7 @@ GameObject:
   - component: {fileID: 893728584}
   - component: {fileID: 893728586}
   - component: {fileID: 893728585}
+  - component: {fileID: 893728588}
   m_Layer: 5
   m_Name: BalanceTitle
   m_TagString: Untagged
@@ -1237,7 +1465,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893728583}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1293,6 +1521,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893728583}
   m_CullTransparentMesh: 1
+--- !u!114 &893728588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893728583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1071503705}
+  balanceMoneyText: {fileID: 985269418}
+  LessMoneyPanel: {fileID: 568088831}
+  depositInput: {fileID: 785893967}
+  withdrawInput: {fileID: 1134699879}
+  depositButton: {fileID: 1935783754}
 --- !u!1 &932774998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,6 +1630,7 @@ GameObject:
   - component: {fileID: 962239282}
   - component: {fileID: 962239284}
   - component: {fileID: 962239283}
+  - component: {fileID: 962239285}
   m_Layer: 5
   m_Name: WithdrawPanel
   m_TagString: Untagged
@@ -1456,6 +1703,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962239281}
   m_CullTransparentMesh: 1
+--- !u!114 &962239285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962239281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d973b390f7d7a6341bb9b6481c740399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depositPanel: {fileID: 1473660550}
+  depositButton: {fileID: 1935783750}
+  withdrawPanel: {fileID: 962239281}
+  withdrawButton: {fileID: 1372033737}
 --- !u!1 &985269416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,8 +1754,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89, y: 0}
-  m_SizeDelta: {x: 103.5, y: 46.4}
+  m_AnchoredPosition: {x: 108.28607, y: 0}
+  m_SizeDelta: {x: 142.0721, y: 46.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985269418
 MonoBehaviour:
@@ -1527,7 +1790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 50000
+  m_Text: 0
 --- !u!222 &985269419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1658,9 +1921,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 677292435}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: depositBack
+      - m_Target: {fileID: 1473660554}
+        m_TargetAssemblyTypeName: DepositWithdraw, Assembly-CSharp
+        m_MethodName: DepositBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1683,7 +1946,7 @@ GameObject:
   - component: {fileID: 1016606746}
   - component: {fileID: 1016606748}
   m_Layer: 5
-  m_Name: outputBtn
+  m_Name: depositBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1791,7 +2054,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1016606746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OndepositButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1071503703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,8 +2102,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 15, y: -50}
+  m_SizeDelta: {x: 170, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071503705
 MonoBehaviour:
@@ -1863,7 +2138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100000
+  m_Text: 0
 --- !u!222 &1071503706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1885,7 +2160,7 @@ GameObject:
   - component: {fileID: 1134699880}
   - component: {fileID: 1134699879}
   m_Layer: 5
-  m_Name: InputField (Legacy)
+  m_Name: InputField (Withdraw)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2140,7 +2415,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215459658}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OnInButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1244535292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,6 +2601,7 @@ GameObject:
   - component: {fileID: 1372033739}
   - component: {fileID: 1372033741}
   - component: {fileID: 1372033743}
+  - component: {fileID: 1372033744}
   m_Layer: 5
   m_Name: Withdraw
   m_TagString: Untagged
@@ -2424,9 +2712,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 677292435}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: withdraw
+      - m_Target: {fileID: 1372033744}
+        m_TargetAssemblyTypeName: DepositWithdraw, Assembly-CSharp
+        m_MethodName: Withdraw
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2446,6 +2734,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb3c550f90546ad41836fec538fd432c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1372033744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372033737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d973b390f7d7a6341bb9b6481c740399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   depositPanel: {fileID: 1473660550}
@@ -2573,7 +2873,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1404087935}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OnOutButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1412418298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,7 +2993,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434572303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2827,6 +3139,7 @@ GameObject:
   - component: {fileID: 1473660551}
   - component: {fileID: 1473660553}
   - component: {fileID: 1473660552}
+  - component: {fileID: 1473660554}
   m_Layer: 5
   m_Name: DepositPanel
   m_TagString: Untagged
@@ -2899,6 +3212,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473660550}
   m_CullTransparentMesh: 1
+--- !u!114 &1473660554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473660550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d973b390f7d7a6341bb9b6481c740399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depositPanel: {fileID: 1473660550}
+  depositButton: {fileID: 1935783750}
+  withdrawPanel: {fileID: 962239281}
+  withdrawButton: {fileID: 1372033737}
 --- !u!1 &1494614666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3509,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1527095330}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OnOutButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1536918161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,9 +3644,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 677292435}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: withdrawBack
+      - m_Target: {fileID: 962239285}
+        m_TargetAssemblyTypeName: DepositWithdraw, Assembly-CSharp
+        m_MethodName: WithdrawBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3328,7 +3669,7 @@ GameObject:
   - component: {fileID: 1543780073}
   - component: {fileID: 1543780075}
   m_Layer: 5
-  m_Name: inputBtn
+  m_Name: withdrawBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3718,7 +4059,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608605315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 549207806}
+        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+        m_MethodName: OnInButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10000
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1719248463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,6 +4402,7 @@ RectTransform:
   - {fileID: 1935783751}
   - {fileID: 962239282}
   - {fileID: 1473660551}
+  - {fileID: 568088832}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4229,6 +4583,7 @@ GameObject:
   - component: {fileID: 1935783753}
   - component: {fileID: 1935783752}
   - component: {fileID: 1935783754}
+  - component: {fileID: 1935783755}
   m_Layer: 5
   m_Name: Deposit
   m_TagString: Untagged
@@ -4339,9 +4694,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 677292435}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: deposit
+      - m_Target: {fileID: 1935783755}
+        m_TargetAssemblyTypeName: DepositWithdraw, Assembly-CSharp
+        m_MethodName: Deposit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4351,6 +4706,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1935783755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935783750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d973b390f7d7a6341bb9b6481c740399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depositPanel: {fileID: 1473660550}
+  depositButton: {fileID: 1935783750}
+  withdrawPanel: {fileID: 962239281}
+  withdrawButton: {fileID: 1372033737}
 --- !u!1 &2129165080
 GameObject:
   m_ObjectHideFlags: 0
