@@ -1,14 +1,14 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MoneyManager : MonoBehaviour
 {
-    public Text moneyText; // È­¸é¿¡ ÇöÀç ±Ý¾×À» Ç¥½ÃÇÒ ÅØ½ºÆ®
-    public Text balanceMoneyText; //È­¸é¿¡ ÇöÀç ÀÜ¾×À» Ç¥½ÃÇÒ ÅØ½ºÆ®
-    private int currentMoney = 100000; // ÃÊ±â ±Ý¾×
-    private int balanceMoney = 50000; // ÃÊ±â ÀÜ¾×
+    public Text moneyText; // í™”ë©´ì— í˜„ìž¬ ê¸ˆì•¡ì„ í‘œì‹œí•  í…ìŠ¤íŠ¸
+    public Text balanceMoneyText; //í™”ë©´ì— í˜„ìž¬ ìž”ì•¡ì„ í‘œì‹œí•  í…ìŠ¤íŠ¸
+    private int currentMoney = 100000; // ì´ˆê¸° ê¸ˆì•¡
+    private int balanceMoney = 50000; // ì´ˆê¸° ìž”ì•¡
     public GameObject LessMoneyPanel;
     public InputField depositInput;
     public InputField withdrawInput;
@@ -17,7 +17,7 @@ public class MoneyManager : MonoBehaviour
 
     void Start()
     {
-        UpdateMoneyText();  // ÃÊ±â ÀÜ¾×À» Ç¥½Ã
+        UpdateMoneyText();  // ì´ˆê¸° ìž”ì•¡ì„ í‘œì‹œ
         depositButton.onClick.AddListener(Deposit);
         withdrawButton.onClick.AddListener(Withdraw);
     }
@@ -31,7 +31,7 @@ public class MoneyManager : MonoBehaviour
     //}
     void UpdateMoneyText()
     {
-        moneyText.text = currentMoney.ToString("C0"); // C0´Â ÅëÈ­ Çü½ÄÀ¸·Î Ç¥½ÃÇÏ°í ÄÞ¸¶(,)¸¦ ºÙ¿©ÁÝ´Ï´Ù.
+        moneyText.text = currentMoney.ToString("C0"); // C0ëŠ” í†µí™” í˜•ì‹ìœ¼ë¡œ í‘œì‹œí•˜ê³  ì½¤ë§ˆ(,)ë¥¼ ë¶™ì—¬ì¤ë‹ˆë‹¤.
         balanceMoneyText.text = balanceMoney.ToString("C0");
     }
 
@@ -43,31 +43,31 @@ public class MoneyManager : MonoBehaviour
             balanceMoney += amount;
             UpdateMoneyText();
 
-            // ¿©±â¿¡ ÀÔ±Ý ·ÎÁ÷À» Ãß°¡ÇÏ¼¼¿ä.
+            // ì—¬ê¸°ì— ìž…ê¸ˆ ë¡œì§ì„ ì¶”ê°€í•˜ì„¸ìš”.
             DepositMoney(amount);
         }
         else
         {
-            //Debug.Log("ÀÜ¾× ºÎÁ·");
-            // ÀÜ¾×ÀÌ ºÎÁ·ÇÒ ¶§ Ã³¸®ÇÒ ³»¿ëÀ» ¿©±â¿¡ Ãß°¡ÇÏ¼¼¿ä.
+            //Debug.Log("ìž”ì•¡ ë¶€ì¡±");
+            // ìž”ì•¡ì´ ë¶€ì¡±í•  ë•Œ ì²˜ë¦¬í•  ë‚´ìš©ì„ ì—¬ê¸°ì— ì¶”ê°€í•˜ì„¸ìš”.
             MoneyLess();
         }
     }
 
     public void Deposit()
     {
-        // ÀÔ·ÂµÈ ±Ý¾×À» °¡Á®¿À±â
+        // ìž…ë ¥ëœ ê¸ˆì•¡ì„ ê°€ì ¸ì˜¤ê¸°
         string depositAmountString = depositInput.text;
 
-        // ÀÔ·ÂµÈ ±Ý¾×ÀÌ À¯È¿ÇÑÁö È®ÀÎ
+        // ìž…ë ¥ëœ ê¸ˆì•¡ì´ ìœ íš¨í•œì§€ í™•ì¸
         if (int.TryParse(depositAmountString, out int depositAmount))
         {
             if(currentMoney >= depositAmount) 
             {
-                // ÀÔ±Ý ½ÇÇà
+                // ìž…ê¸ˆ ì‹¤í–‰
                 currentMoney -= depositAmount;
                 balanceMoney += depositAmount;
-                // ÀÜ¾× ¾÷µ¥ÀÌÆ®
+                // ìž”ì•¡ ì—…ë°ì´íŠ¸
                 UpdateMoneyText();
                 ResetInputFields();
             }
@@ -78,8 +78,8 @@ public class MoneyManager : MonoBehaviour
         }
         else
         {
-            // À¯È¿ÇÏÁö ¾ÊÀº ÀÔ·ÂÀÏ °æ¿ì Ã³¸®
-            Debug.Log("À¯È¿ÇÏÁö ¾ÊÀº ±Ý¾×ÀÔ´Ï´Ù.");
+            // ìœ íš¨í•˜ì§€ ì•Šì€ ìž…ë ¥ì¼ ê²½ìš° ì²˜ë¦¬
+            Debug.Log("ìœ íš¨í•˜ì§€ ì•Šì€ ê¸ˆì•¡ìž…ë‹ˆë‹¤.");
         }
 
     }
@@ -93,31 +93,31 @@ public class MoneyManager : MonoBehaviour
             balanceMoney -= amount;
             UpdateMoneyText();
 
-            // ¿©±â¿¡ Ãâ±Ý ·ÎÁ÷À» Ãß°¡ÇÏ¼¼¿ä.
+            // ì—¬ê¸°ì— ì¶œê¸ˆ ë¡œì§ì„ ì¶”ê°€í•˜ì„¸ìš”.
             WithdrawMoney(amount);
         }
         else
         {
-            //Debug.Log("ÀÜ¾× ºÎÁ·");
-            // ÀÜ¾×ÀÌ ºÎÁ·ÇÒ ¶§ Ã³¸®ÇÒ ³»¿ëÀ» ¿©±â¿¡ Ãß°¡ÇÏ¼¼¿ä.
+            //Debug.Log("ìž”ì•¡ ë¶€ì¡±");
+            // ìž”ì•¡ì´ ë¶€ì¡±í•  ë•Œ ì²˜ë¦¬í•  ë‚´ìš©ì„ ì—¬ê¸°ì— ì¶”ê°€í•˜ì„¸ìš”.
             MoneyLess();
         }
     }
 
     public void Withdraw()
     {
-        // ÀÔ·ÂµÈ ±Ý¾×À» °¡Á®¿À±â
+        // ìž…ë ¥ëœ ê¸ˆì•¡ì„ ê°€ì ¸ì˜¤ê¸°
         string withdrawAmountString = withdrawInput.text;
 
-        // ÀÔ·ÂµÈ ±Ý¾×ÀÌ À¯È¿ÇÑÁö È®ÀÎ
+        // ìž…ë ¥ëœ ê¸ˆì•¡ì´ ìœ íš¨í•œì§€ í™•ì¸
         if (int.TryParse(withdrawAmountString, out int withdrawAmount))
         {
             if (balanceMoney >= withdrawAmount)
             {
-                // Ãâ±Ý ½ÇÇà
+                // ì¶œê¸ˆ ì‹¤í–‰
                 currentMoney += withdrawAmount;
                 balanceMoney -= withdrawAmount;
-                // ÀÜ¾× ¾÷µ¥ÀÌÆ®
+                // ìž”ì•¡ ì—…ë°ì´íŠ¸
                 UpdateMoneyText();
                 ResetInputFields();
             }
@@ -128,23 +128,23 @@ public class MoneyManager : MonoBehaviour
         }
         else
         {
-            // À¯È¿ÇÏÁö ¾ÊÀº ÀÔ·ÂÀÏ °æ¿ì Ã³¸®
-            Debug.Log("À¯È¿ÇÏÁö ¾ÊÀº ±Ý¾×ÀÔ´Ï´Ù.");
+            // ìœ íš¨í•˜ì§€ ì•Šì€ ìž…ë ¥ì¼ ê²½ìš° ì²˜ë¦¬
+            Debug.Log("ìœ íš¨í•˜ì§€ ì•Šì€ ê¸ˆì•¡ìž…ë‹ˆë‹¤.");
         }
 
     }
 
     void DepositMoney(int amount)
     {
-        // ¿©±â¿¡ ÀÔ±Ý ·ÎÁ÷À» Ãß°¡ÇÏ¼¼¿ä.
-        // ¿¹¸¦ µé¾î, µ¥ÀÌÅÍº£ÀÌ½º ¾÷µ¥ÀÌÆ®, °ÔÀÓ ³» °¡»ó ÀÚ»ê Áõ°¡ µîÀ» ¼öÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.
-        Debug.Log(amount.ToString("C0") + " ÀÔ±Ý ¿Ï·á");
+        // ì—¬ê¸°ì— ìž…ê¸ˆ ë¡œì§ì„ ì¶”ê°€í•˜ì„¸ìš”.
+        // ì˜ˆë¥¼ ë“¤ì–´, ë°ì´í„°ë² ì´ìŠ¤ ì—…ë°ì´íŠ¸, ê²Œìž„ ë‚´ ê°€ìƒ ìžì‚° ì¦ê°€ ë“±ì„ ìˆ˜í–‰í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+        Debug.Log(amount.ToString("C0") + " ìž…ê¸ˆ ì™„ë£Œ");
     }
     void WithdrawMoney(int amount)
     {
-        // ¿©±â¿¡ ÀÔ±Ý ·ÎÁ÷À» Ãß°¡ÇÏ¼¼¿ä.
-        // ¿¹¸¦ µé¾î, µ¥ÀÌÅÍº£ÀÌ½º ¾÷µ¥ÀÌÆ®, °ÔÀÓ ³» °¡»ó ÀÚ»ê Áõ°¡ µîÀ» ¼öÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.
-        Debug.Log(amount.ToString("C0") + " Ãâ±Ý ¿Ï·á");
+        // ì—¬ê¸°ì— ì¶œê¸ˆ ë¡œì§ì„ ì¶”ê°€í•˜ì„¸ìš”.
+        // ì˜ˆë¥¼ ë“¤ì–´, ë°ì´í„°ë² ì´ìŠ¤ ì—…ë°ì´íŠ¸, ê²Œìž„ ë‚´ ê°€ìƒ ìžì‚° ì¦ê°€ ë“±ì„ ìˆ˜í–‰í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+        Debug.Log(amount.ToString("C0") + " ì¶œê¸ˆ ì™„ë£Œ");
     }
     void MoneyLess()
     {
