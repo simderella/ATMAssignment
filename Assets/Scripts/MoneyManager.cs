@@ -18,15 +18,17 @@ public class MoneyManager : MonoBehaviour
     void Start()
     {
         UpdateMoneyText();  // 초기 잔액을 표시
-    }
-    public void OndepositButton()
-    {
         depositButton.onClick.AddListener(Deposit);
-    }
-    public void OnwithdrawButton()
-    {
         withdrawButton.onClick.AddListener(Withdraw);
     }
+    //public void OndepositButton()
+    //{
+    //    depositButton.onClick.AddListener(Deposit);
+    //}
+    //public void OnwithdrawButton()
+    //{
+    //    withdrawButton.onClick.AddListener(Withdraw);
+    //}
     void UpdateMoneyText()
     {
         moneyText.text = currentMoney.ToString("C0"); // C0는 통화 형식으로 표시하고 콤마(,)를 붙여줍니다.
@@ -65,14 +67,14 @@ public class MoneyManager : MonoBehaviour
                 // 입금 실행
                 currentMoney -= depositAmount;
                 balanceMoney += depositAmount;
+                // 잔액 업데이트
+                UpdateMoneyText();
+                ResetInputFields();
             }
             else
             {
                 MoneyLess();
             }
-            // 잔액 업데이트
-            UpdateMoneyText();
-
         }
         else
         {
@@ -110,19 +112,19 @@ public class MoneyManager : MonoBehaviour
         // 입력된 금액이 유효한지 확인
         if (int.TryParse(withdrawAmountString, out int withdrawAmount))
         {
-            if (currentMoney >= withdrawAmount)
+            if (balanceMoney >= withdrawAmount)
             {
                 // 출금 실행
                 currentMoney += withdrawAmount;
                 balanceMoney -= withdrawAmount;
+                // 잔액 업데이트
+                UpdateMoneyText();
+                ResetInputFields();
             }
             else
             {
                 MoneyLess();
             }
-            // 잔액 업데이트
-            UpdateMoneyText();
-
         }
         else
         {
@@ -152,5 +154,11 @@ public class MoneyManager : MonoBehaviour
     void HideLessMoneyPanel()
     {
         LessMoneyPanel.SetActive(false);
+    }
+
+    void ResetInputFields()
+    {
+        depositInput.text = ""; // Clear deposit input field
+        withdrawInput.text = ""; // Clear withdraw input field
     }
 }

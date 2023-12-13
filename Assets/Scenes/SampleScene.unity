@@ -645,8 +645,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
         m_MethodName: OnOutButtonClick
         m_Mode: 3
         m_Arguments:
@@ -779,8 +779,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
         m_MethodName: OnInButtonClick
         m_Mode: 3
         m_Arguments:
@@ -894,7 +894,6 @@ GameObject:
   - component: {fileID: 549207803}
   - component: {fileID: 549207805}
   - component: {fileID: 549207804}
-  - component: {fileID: 549207806}
   m_Layer: 5
   m_Name: Readymoney
   m_TagString: Untagged
@@ -962,25 +961,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549207802}
   m_CullTransparentMesh: 1
---- !u!114 &549207806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549207802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyText: {fileID: 1071503705}
-  balanceMoneyText: {fileID: 985269418}
-  LessMoneyPanel: {fileID: 568088831}
-  depositInput: {fileID: 785893967}
-  withdrawInput: {fileID: 1134699879}
-  depositButton: {fileID: 1016606748}
-  withdrawButton: {fileID: 1543780075}
 --- !u!1 &562297849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1052,6 @@ GameObject:
   - component: {fileID: 568088832}
   - component: {fileID: 568088834}
   - component: {fileID: 568088833}
-  - component: {fileID: 568088835}
   m_Layer: 5
   m_Name: LessMoneyPanel
   m_TagString: Untagged
@@ -1139,25 +1118,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568088831}
   m_CullTransparentMesh: 1
---- !u!114 &568088835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568088831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyText: {fileID: 1071503705}
-  balanceMoneyText: {fileID: 985269418}
-  LessMoneyPanel: {fileID: 568088831}
-  depositInput: {fileID: 785893967}
-  withdrawInput: {fileID: 1134699879}
-  depositButton: {fileID: 1016606748}
-  withdrawButton: {fileID: 0}
 --- !u!1 &677292434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,19 +1336,7 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnSubmit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
-        m_MethodName: Deposit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnDidEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -1452,7 +1400,6 @@ GameObject:
   - component: {fileID: 893728584}
   - component: {fileID: 893728586}
   - component: {fileID: 893728585}
-  - component: {fileID: 893728588}
   m_Layer: 5
   m_Name: BalanceTitle
   m_TagString: Untagged
@@ -1523,25 +1470,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893728583}
   m_CullTransparentMesh: 1
---- !u!114 &893728588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893728583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyText: {fileID: 1071503705}
-  balanceMoneyText: {fileID: 985269418}
-  LessMoneyPanel: {fileID: 568088831}
-  depositInput: {fileID: 785893967}
-  withdrawInput: {fileID: 1134699879}
-  depositButton: {fileID: 1016606748}
-  withdrawButton: {fileID: 1543780075}
 --- !u!1 &932774998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,9 +1986,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
-        m_MethodName: OndepositButton
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
+        m_MethodName: Deposit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2247,19 +2175,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnDidEndEdit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
-        m_MethodName: Withdraw
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2431,8 +2347,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
         m_MethodName: OnInButtonClick
         m_Mode: 3
         m_Arguments:
@@ -2615,7 +2531,6 @@ GameObject:
   - component: {fileID: 1372033740}
   - component: {fileID: 1372033739}
   - component: {fileID: 1372033741}
-  - component: {fileID: 1372033743}
   - component: {fileID: 1372033744}
   m_Layer: 5
   m_Name: Withdraw
@@ -2739,18 +2654,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1372033743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372033737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb3c550f90546ad41836fec538fd432c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1372033744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,8 +2792,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
         m_MethodName: OnOutButtonClick
         m_Mode: 3
         m_Arguments:
@@ -3525,8 +3428,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
         m_MethodName: OnOutButtonClick
         m_Mode: 3
         m_Arguments:
@@ -3793,9 +3696,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
-        m_MethodName: OnwithdrawButton
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
+        m_MethodName: Withdraw
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4087,8 +3990,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 549207806}
-        m_TargetAssemblyTypeName: InputMoney, Assembly-CSharp
+      - m_Target: {fileID: 1854974424}
+        m_TargetAssemblyTypeName: MoneyManager, Assembly-CSharp
         m_MethodName: OnInButtonClick
         m_Mode: 3
         m_Arguments:
@@ -4339,6 +4242,8 @@ GameObject:
   - component: {fileID: 1854974422}
   - component: {fileID: 1854974421}
   - component: {fileID: 1854974420}
+  - component: {fileID: 1854974424}
+  - component: {fileID: 1854974425}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4438,6 +4343,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1854974424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854974419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9557438004da4bbeef0d35a4d1a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1071503705}
+  balanceMoneyText: {fileID: 985269418}
+  LessMoneyPanel: {fileID: 568088831}
+  depositInput: {fileID: 785893967}
+  withdrawInput: {fileID: 1134699879}
+  depositButton: {fileID: 1935783754}
+  withdrawButton: {fileID: 1372033741}
+--- !u!114 &1854974425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854974419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d973b390f7d7a6341bb9b6481c740399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  depositPanel: {fileID: 1473660550}
+  depositButton: {fileID: 1935783750}
+  withdrawPanel: {fileID: 962239281}
+  withdrawButton: {fileID: 1372033737}
 --- !u!1 &1873251344
 GameObject:
   m_ObjectHideFlags: 0
