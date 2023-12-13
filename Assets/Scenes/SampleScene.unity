@@ -1540,8 +1540,8 @@ MonoBehaviour:
   LessMoneyPanel: {fileID: 568088831}
   depositInput: {fileID: 785893967}
   withdrawInput: {fileID: 1134699879}
-  depositButton: {fileID: 1935783754}
-  withdrawButton: {fileID: 0}
+  depositButton: {fileID: 1016606748}
+  withdrawButton: {fileID: 1543780075}
 --- !u!1 &932774998
 GameObject:
   m_ObjectHideFlags: 0

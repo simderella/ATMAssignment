@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InputMoney : MonoBehaviour
+public class MoneyManager : MonoBehaviour
 {
     public Text moneyText; // 화면에 현재 금액을 표시할 텍스트
     public Text balanceMoneyText; //화면에 현재 잔액을 표시할 텍스트
