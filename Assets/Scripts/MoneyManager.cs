@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,17 +18,10 @@ public class MoneyManager : MonoBehaviour
     void Start()
     {
         UpdateMoneyText();  // 초기 잔액을 표시
-        depositButton.onClick.AddListener(Deposit);
-        withdrawButton.onClick.AddListener(Withdraw);
+        //depositButton.onClick.AddListener(Deposit); 입금 버튼
+        //withdrawButton.onClick.AddListener(Withdraw); 출금 버튼
     }
-    //public void OndepositButton()
-    //{
-    //    depositButton.onClick.AddListener(Deposit);
-    //}
-    //public void OnwithdrawButton()
-    //{
-    //    withdrawButton.onClick.AddListener(Withdraw);
-    //}
+
     void UpdateMoneyText()
     {
         moneyText.text = currentMoney.ToString("C0"); // C0는 통화 형식으로 표시하고 콤마(,)를 붙여줍니다.
@@ -70,6 +63,7 @@ public class MoneyManager : MonoBehaviour
                 // 잔액 업데이트
                 UpdateMoneyText();
                 ResetInputFields();
+                Debug.Log("입금완료");
             }
             else
             {

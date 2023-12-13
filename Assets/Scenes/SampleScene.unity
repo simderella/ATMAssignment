@@ -2642,7 +2642,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1372033744}
+      - m_Target: {fileID: 1854974425}
         m_TargetAssemblyTypeName: DepositWithdraw, Assembly-CSharp
         m_MethodName: Withdraw
         m_Mode: 1
@@ -4330,8 +4330,8 @@ RectTransform:
   - {fileID: 246294157}
   - {fileID: 893728584}
   - {fileID: 549207803}
-  - {fileID: 1372033738}
   - {fileID: 1935783751}
+  - {fileID: 1372033738}
   - {fileID: 962239282}
   - {fileID: 1473660551}
   - {fileID: 568088832}
@@ -4661,7 +4661,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1935783755}
+      - m_Target: {fileID: 1854974425}
         m_TargetAssemblyTypeName: DepositWithdraw, Assembly-CSharp
         m_MethodName: Deposit
         m_Mode: 1

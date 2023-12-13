@@ -9,7 +9,6 @@ public class DepositWithdraw : MonoBehaviour
     public GameObject depositButton;
     public GameObject withdrawPanel;
     public GameObject withdrawButton;
-
     public void Deposit()
     {
         depositPanel.SetActive(true);
