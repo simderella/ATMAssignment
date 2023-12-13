@@ -13,6 +13,8 @@ public class InputMoney : MonoBehaviour
     public InputField depositInput;
     public InputField withdrawInput;
     public Button depositButton;
+    public Button withdrawButton;
+
     void Start()
     {
         UpdateMoneyText();  // 초기 잔액을 표시
@@ -20,6 +22,10 @@ public class InputMoney : MonoBehaviour
     public void OndepositButton()
     {
         depositButton.onClick.AddListener(Deposit);
+    }
+    public void OnwithdrawButton()
+    {
+        withdrawButton.onClick.AddListener(Withdraw);
     }
     void UpdateMoneyText()
     {
@@ -71,10 +77,11 @@ public class InputMoney : MonoBehaviour
         else
         {
             // 유효하지 않은 입력일 경우 처리
-            Debug.LogError("유효하지 않은 금액입니다.");
+            Debug.Log("유효하지 않은 금액입니다.");
         }
 
     }
+
 
     public void OnOutButtonClick(int amount)
     {
@@ -93,6 +100,36 @@ public class InputMoney : MonoBehaviour
             // 잔액이 부족할 때 처리할 내용을 여기에 추가하세요.
             MoneyLess();
         }
+    }
+
+    public void Withdraw()
+    {
+        // 입력된 금액을 가져오기
+        string withdrawAmountString = withdrawInput.text;
+
+        // 입력된 금액이 유효한지 확인
+        if (int.TryParse(withdrawAmountString, out int withdrawAmount))
+        {
+            if (currentMoney >= withdrawAmount)
+            {
+                // 출금 실행
+                currentMoney += withdrawAmount;
+                balanceMoney -= withdrawAmount;
+            }
+            else
+            {
+                MoneyLess();
+            }
+            // 잔액 업데이트
+            UpdateMoneyText();
+
+        }
+        else
+        {
+            // 유효하지 않은 입력일 경우 처리
+            Debug.Log("유효하지 않은 금액입니다.");
+        }
+
     }
 
     void DepositMoney(int amount)
